@@ -1,0 +1,84 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  background-color: #37474F;
+}
+
+
+/*==========Animating Submit Button==========*/
+
+button {
+  position: relative;
+  background-color: #66BB6A;
+  border: none;
+  font-size: 16px;
+  color: #FFFFFF;
+  padding: 20px;
+  width: 100px;
+  text-align: center;
+  -webkit-transition-duration: 0.4s;
+  /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:after {
+  content: "";
+  background: #90EE90;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px!important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+button:focus {
+  outline: 0;
+}
+
+
+/*==========Changing Font Colors==========*/
+
+#output-days {
+  color: #42A5F5;
+}
+
+#output-weeks {
+  color: #42A5F5;
+}
+
+#output-months {
+  color: #42A5F5;
+}
+
+#output-units {
+  color: #42A5F5;
+}
+
+h1 {
+  color: #42A5F5;
+}
+
+
+/*==========Sticky Footer==========*/
+
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+  color: #78909C;
+  /*Material Grey 400 series color*/
+}

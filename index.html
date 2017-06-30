@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Convert Frequency To Units</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="convert.js"></script>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="shortcut icon" href="calc16.png" type="image/png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body>
+    <header>
+      <h1>Frequency to Units Converter</h1>
+    </header>
+    <main>
+      <b>Enter Start Date:  </b><input id="start-date" type="date" placeholder="yyyy-mm-dd" />
+      <br />
+      <b>Enter End Date:  </b><input id="end-date" type="date" placeholder="yyyy-mm-dd" />
+      <br />
+      <b>Frequency:  </b> <input id="freq" type="number" placeholder="Enter a number" />hrs/ <select id="freq-type">
+      <option selected>week</option>
+      <option>month</option>
+      <option>day</option>
+    </select>
+      <br /><br />
+      <button id="submit">Submit</button>
+      <br /><br />
+      <div id="output-days"></div>
+      <div id="output-weeks"></div>
+      <div id="output-months"></div>
+      <br />
+      <div id="output-units"></div>
+    </main>
+    <footer>
+      <small>&copy; Copyright 2017, Omar Ghazi</small>
+    </footer>
+
+  </body>
+
+</html>
