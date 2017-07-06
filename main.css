@@ -74,6 +74,40 @@ h1 {
 }
 
 
+/*==========Input Box Styling==========*/
+
+input {
+  border: none;
+  border-bottom: 2px solid #90EE90;
+  border-radius: 4px;
+  padding-left: 5px;
+  background-color: #37474F;
+  color: #E8F5E9;
+  outline: none;
+}
+
+::-webkit-input-placeholder {
+  color: #E8F5E9;
+}
+
+::-moz-placeholder {
+  color: #E8F5E9;
+}
+
+::-ms-placeholder {
+  color: #E8F5E9;
+}
+
+::placeholder {
+  color: #E8F5E9;
+}
+
+
+/*input:focus {
+  border: 2px dashed #FFFFFF;
+}*/
+
+
 /*==========Sticky Footer==========*/
 
 footer {
