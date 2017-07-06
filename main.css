@@ -101,9 +101,12 @@ a:hover{
 /*==========Sticky Footer==========*/
 
 footer {
+  border-top: 1px solid #78909C;
   position: fixed;
   width: 100%;
   bottom: 0px;
+  background-color: #37474F;
   color: #B0BEC5;
+  opacity: .7;
   /*Material Grey 400 series color*/
 }
