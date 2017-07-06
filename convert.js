@@ -19,14 +19,10 @@ $(document).ready(function() {
       console.log(units);
 
     } else if (isNaN(date1Entered) || isNaN(date2Entered) || isNaN(frequency)) { //catch if no date was entered
-      $("#output-days").html("<h3>You will need to select a start date, end date, and frequency!</h3>");
-      $("#output-weeks").html("");
-      $("#output-months").html("");
+      $("#output-time").html("<h3>You will need to select a start date, end date, and frequency!</h3>");
       $("#output-units").html("");
     } else { //catch if end date is before start date
-      $("#output-days").html("<h3>Your end date cannot be before your start date! <br> Please try again!</h3>");
-      $("#output-weeks").html("");
-      $("#output-months").html("");
+      $("#output-time").html("<h3>Your end date cannot be before your start date! <br> Please try again!</h3>");
       $("#output-units").html("");
     }
 
