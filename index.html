@@ -20,7 +20,13 @@
       <br />
       <b>Enter End Date:  </b><input id="end-date" type="date" placeholder="yyyy-mm-dd" />
       <br />
-      <b>Frequency:  </b> <input id="freq" type="number" placeholder="Enter a number" />hrs/ <select id="freq-type">
+      <b>Frequency:  </b> <input id="freq" type="number" placeholder="Enter a number" />
+      <br /> Convert From:
+      <select id=convertType>
+        <option selected>hrs</option>
+        <option>units</option>
+      </select>/
+      <select id="freq-type">
       <option selected>week</option>
       <option>month</option>
       <option>day</option>
@@ -35,7 +41,9 @@
       <div id="output-units"></div>
     </main>
     <footer>
-      <small>&copy; Copyright 2017, Omar Ghazi</small>
+      <small>v 0.2.0
+        <br />
+        &copy; Copyright 2017, Ghazi Design</small>
     </footer>
 
   </body>

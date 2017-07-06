@@ -2,6 +2,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   text-align: center;
   background-color: #37474F;
+  color: #FFFFFF;
 }
 
 
@@ -53,23 +54,23 @@ button:focus {
 /*==========Changing Font Colors==========*/
 
 #output-days {
-  color: #42A5F5;
+  color: #FFFFFF;
 }
 
 #output-weeks {
-  color: #42A5F5;
+  color: #FFFFFF;
 }
 
 #output-months {
-  color: #42A5F5;
+  color: #FFFFFF;
 }
 
 #output-units {
-  color: #42A5F5;
+  color: #FFFFFF;
 }
 
 h1 {
-  color: #42A5F5;
+  color: #FFFFFF;
 }
 
 

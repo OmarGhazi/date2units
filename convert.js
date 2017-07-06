@@ -4,6 +4,7 @@ $(document).ready(function() {
     var date2Entered = Date.parse($("#end-date").val());
     var frequency = $("#freq").val();
     var freq_type = $("#freq-type").find(":selected").text();
+    var convertType = $("#convertType").find(":selected").text();
 
 
     //if statements to catch input errors
@@ -11,12 +12,13 @@ $(document).ready(function() {
       var days = convertDate(date1Entered, date2Entered);
       var weeks = Math.abs(Math.round((days / 7) * 10) / 10);
       var months = Math.abs(Math.round((weeks / 4.34534) * 10) / 10);
-      var units = getUnits(date1Entered, date2Entered, frequency, freq_type);
+      var units = getUnits(date1Entered, date2Entered, frequency, convertType, freq_type);
 
       $("#output-days").html(days + " days");
       $("#output-weeks").html(weeks + " weeks");
       $("#output-months").html(months + " months");
       $("#output-units").html(units + " units");
+      console.log(units);
 
     } else if (isNaN(date1Entered) || isNaN(date2Entered) || isNaN(frequency)) { //catch if no date was entered
       $("#output-days").html("<h3>You will need to select a start date, end date, and frequency!</h3>");
@@ -55,18 +57,35 @@ $(document).ready(function() {
 
   }
 
-  function getUnits(date1Entered, date2Entered, frequency, freq_type) {
+  function getUnits(date1Entered, date2Entered, frequency, convertType, freq_type) {
 
     var foundDays = convertDate(date1Entered, date2Entered)
-    var unitsInADay = 4;
+    var unitsInHour = 4;
 
-    if (freq_type === "week") {
-      return Math.abs(Math.round((frequency * (foundDays / 7) * unitsInADay)));
-    } else if (freq_type === "month") {
-      return Math.abs(Math.round((frequency * (foundDays / 30.4) * unitsInADay)));
-    } else {
-      return Math.abs(Math.round((frequency * foundDays) * unitsInADay));
+    if (convertType == "hrs") {
+      if (freq_type === "week") {
+        console.log(Math.abs(Math.round((frequency * (foundDays / 7) * unitsInHour))));
+        return Math.abs(Math.round((frequency * (foundDays / 7) * unitsInHour)));
+      } else if (freq_type === "month") {
+        console.log(Math.abs(Math.round((frequency * (foundDays / 30.4) * unitsInHour))));
+        return Math.abs(Math.round((frequency * (foundDays / 30.4) * unitsInHour)));
+      } else {
+        console.log(Math.abs(Math.round((frequency * foundDays) * unitsInHour)));
+        return Math.abs(Math.round((frequency * foundDays) * unitsInHour));
+      }
+    } else if (convertType === "units") {
+      if (freq_type === "week") {
+        console.log(Math.abs(Math.round((frequency * (foundDays / 7)))));
+        return Math.abs(Math.round((frequency * (foundDays / 7))));
+      } else if (freq_type === "month") {
+        console.log(Math.abs(Math.round((frequency * (foundDays / 30.4)))));
+        return Math.abs(Math.round((frequency * (foundDays / 30.4))));
+      } else {
+        console.log(Math.abs(Math.round((frequency * foundDays))));
+        return Math.abs(Math.round((frequency * foundDays)));
+      }
     }
+
   }
 
 });
