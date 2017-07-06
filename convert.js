@@ -14,9 +14,7 @@ $(document).ready(function() {
       var months = Math.abs(Math.round((weeks / 4.34534) * 10) / 10);
       var units = getUnits(date1Entered, date2Entered, frequency, convertType, freq_type);
 
-      $("#output-days").html("<h3>" + days + " days</h3>");
-      $("#output-weeks").html("<h3>" + weeks + " weeks</h3>");
-      $("#output-months").html("<h3>" + months + " months</h3>");
+      $("#output-time").html("<h3>" + days + " days | " + weeks + " weeks | "+ months + " months</h3>");
       $("#output-units").html("<h3>" + units + " units</h3>");
       console.log(units);
 
