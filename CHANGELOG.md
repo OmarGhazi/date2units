@@ -12,6 +12,8 @@ All notable changes to this project will be documented in this file
 - Header text to white
 - Answers/Results text to white
 - Copyright to Ghazi Design
+- Styling of date and text boxes
+- Title of the tool
 
 ## 0.0.1 [2017.06.30]
 ### Added
